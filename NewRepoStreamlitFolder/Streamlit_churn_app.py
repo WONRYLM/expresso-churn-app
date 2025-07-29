@@ -5,7 +5,7 @@ import joblib
 import numpy as np
 
 # Load the saved model
-model = joblib.load('expresso_churn_model.pkl')
+model = joblib.load('NewRepoStreamlitFolder/expresso_churn_model.pkl')
 
 st.title("Expresso Churn Prediction App")
 st.write("Fill in the client's data below to predict churn probability.")
