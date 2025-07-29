@@ -7,7 +7,7 @@ import numpy as np
 # Load the saved model
 model = joblib.load('expresso_churn_model.pkl')
 
-st.title("📱 Expresso Churn Prediction App")
+st.title("Expresso Churn Prediction App")
 st.write("Fill in the client's data below to predict churn probability.")
 
 # Input fields - Must match the training features exactly
@@ -38,6 +38,6 @@ if st.button('Predict Churn'):
     probability = model.predict_proba(features)[0][1]
 
     if prediction[0] == 1:
-        st.error(f"🚨 The client is likely to churn. Probability: {probability:.2%}")
+        st.error(f"The client is likely to churn. Probability: {probability:.2%}")
     else:
-        st.success(f"✅ The client is unlikely to churn. Probability: {probability:.2%}")
+        st.success(f"The client is unlikely to churn. Probability: {probability:.2%}")
